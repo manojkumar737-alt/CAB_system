@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Cab</title>
+</head>
+<body>
+  <h2>Book a Ride</h2>
+  <nav>
+    <a href="/book_ride.html">➕ Book</a> |
+    <a href="/cgi-bin/show_pending.cgi">📋 Pending</a>
+  </nav>
+  <hr>
+
+  <form method="post" action="/cgi-bin/submit_booking.sh">
+    <label>Customer ID:</label>
+    <select name="customer_id" required>
+<option value="C101">C101 - Anjali Mehra</option>
+<option value="C102">C102 - Ravi Kumar</option>
+<option value="C103">C103 - Neha Singh</option>
+<option value="C104">C104 - Mohan</option>
+<option value="C105">C105 - Rohan</option>
+    </select><br><br>
+
+    <label>Driver:</label>
+    <select name="driver_id" required>
+<option value="D201">Suresh Yadav (UK07AB1234)</option>
+<option value="D202">Pooja Rawat (UK07CD5678)</option>
+<option value="D203">Amit Joshi (UK07EF9012)</option>
+    </select><br><br>
+
+    <label>Pickup Location:</label>
+    <select name="pickup" required>
+<option value="Ballupur">Ballupur</option>
+<option value="Clock Tower">Clock Tower</option>
+<option value="ISBT">ISBT</option>
+<option value="Prem Nagar">Prem Nagar</option>
+<option value="Railway Station">Railway Station</option>
+<option value="Rajpur Road">Rajpur Road</option>
+    </select><br><br>
+
+    <label>Drop Location:</label>
+    <select name="drop" required>
+<option value="Ballupur">Ballupur</option>
+<option value="Clock Tower">Clock Tower</option>
+<option value="ISBT">ISBT</option>
+<option value="Prem Nagar">Prem Nagar</option>
+<option value="Railway Station">Railway Station</option>
+<option value="Rajpur Road">Rajpur Road</option>
+    </select><br><br>
+
+    <input type="submit" value="Book Ride">
+  </form>
+</body>
+</html>

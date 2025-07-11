@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Cab</title>
+</head>
+<body>
+  <h2>Book a Ride</h2>
+  <nav>
+    <a href="/book_ride.html">➕ Book</a> |
+    <a href="/cgi-bin/show_pending.cgi">📋 Pending</a>
+  </nav>
+  <hr>
+
+  <form method="post" action="/cgi-bin/submit_booking.sh">
+    <label>Customer ID:</label>
+    <select name="customer_id" required>
+{{CUSTOMER_OPTIONS}}
+    </select><br><br>
+
+    <label>Driver:</label>
+    <select name="driver_id" required>
+{{DRIVER_OPTIONS}}
+    </select><br><br>
+
+    <label>Pickup Location:</label>
+    <select name="pickup" required>
+{{LOCATION_OPTIONS}}
+    </select><br><br>
+
+    <label>Drop Location:</label>
+    <select name="drop" required>
+{{LOCATION_OPTIONS}}
+    </select><br><br>
+
+    <input type="submit" value="Book Ride">
+  </form>
+</body>
+</html>
