@@ -19,7 +19,13 @@ pipeline {
         sh "docker build -t ${IMAGE_NAME} ."
       }
     }
-
+    stage('Debug') {
+  steps {
+    sh 'which docker || echo "Docker not found"'
+    sh 'docker --version || echo "Docker CLI not available"'
+    sh 'ls -l || echo "Listing files failed"'
+  }
+}
     stage('Run Docker Container') {
       steps {
         // Stop and remove old container if it's running
